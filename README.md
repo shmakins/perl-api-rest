@@ -13,11 +13,15 @@ API REST in Perl using Catalyst (Without current experience)
 
 #### Step 3 - Run project:
 ``
-perl script/perlrest_app_server.pl -p port
+perl script/perlrest_app_server.pl -p 5000
 ``
+
+#### Step 4 - Test our new controller:
+- [Postman template][2]
 
         
 
 
 
 [1]: https://www.youtube.com/watch?v=eYlCxA1xCLE&list=PLuHGXfTWz_BMzvffPXShwvZxBuv9jAR49
+[2]: https://documenter.getpostman.com/view/8137382/TVCY5rkb
