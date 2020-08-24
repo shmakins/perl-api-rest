@@ -7,6 +7,135 @@
 	"item": [
 		{
 			"name": "transactions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9769d518-acc2-454d-b389-c90048e8cf7d",
+						"exec": [
+							"pm.test(\"response should be okay to process\", function () {\r",
+							"    pm.response.to.not.be.error;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should have type and credit\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.type).to.eql(\"credit\");\r",
+							"    pm.expect(jsonData.amount).to.eql(20);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "type",
+							"value": "credit",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "20",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "3b7dedb8-7e0b-4791-a167-99bc5e71b397",
+						"exec": [
+							"pm.test(\"response should be error\", function () {\r",
+							"    pm.response.to.be.error;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should return error\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.error).to.eql(\"Transaction not allowed! You only have $ 20 available in your account.\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "type",
+							"value": "debit",
+							"type": "text"
+						},
+						{
+							"key": "amount",
+							"value": "30",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/transactions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"transactions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transactions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1444af0b-018a-477b-a8a4-bc945d7f1344",
+						"exec": [
+							"pm.test(\"response should be okay to process\", function () {\r",
+							"    pm.response.to.not.be.error;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should have type and credit\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData[0].type).to.eql(\"credit\");\r",
+							"    pm.expect(jsonData[0].amount).to.eql(20);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [
@@ -39,6 +168,26 @@
 		},
 		{
 			"name": "transactions/id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e025b334-0ff9-436b-8aeb-fa1b429869df",
+						"exec": [
+							"pm.test(\"response should be okay to process\", function () {\r",
+							"    pm.response.to.not.be.error;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should have type and credit\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.type).to.eql(\"credit\");\r",
+							"    pm.expect(jsonData.amount).to.eql(20);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "GET",
 				"header": [],
@@ -58,34 +207,39 @@
 			"response": []
 		},
 		{
-			"name": "transactions",
+			"name": "transactions/id",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "0ae01a71-721d-447e-822e-ecb82e4463cc",
+						"exec": [
+							"pm.test(\"response should be error\", function () {\r",
+							"    pm.response.to.be.error;\r",
+							"});\r",
+							"\r",
+							"pm.test(\"response should return error\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.error).to.eql(\"The transaction id 35 doesn't exist!\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
-				"method": "POST",
+				"method": "GET",
 				"header": [],
-				"body": {
-					"mode": "urlencoded",
-					"urlencoded": [
-						{
-							"key": "type",
-							"value": "credit",
-							"type": "text"
-						},
-						{
-							"key": "amount",
-							"value": "20",
-							"type": "text"
-						}
-					]
-				},
 				"url": {
-					"raw": "http://localhost:5000/transactions",
+					"raw": "http://localhost:5000/transactions/35",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "5000",
 					"path": [
-						"transactions"
+						"transactions",
+						"35"
 					]
 				}
 			},

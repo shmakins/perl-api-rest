@@ -1,0 +1,203 @@
+{
+	"id": "2d8736fd-4ac4-4669-8a38-fcad497b08d8",
+	"name": "Perl",
+	"timestamp": "2020-08-24T23:23:45.471Z",
+	"collection_id": "e5d713c9-dd34-47f5-93bb-4f901cdc74f4",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 10,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "6d0190af-6c77-4a30-a003-15b92e47866d",
+			"name": "transactions",
+			"url": "http://localhost:5000/transactions",
+			"time": 554,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response should be okay to process": true,
+				"response should have type and credit": true
+			},
+			"testPassFailCounts": {
+				"response should be okay to process": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response should have type and credit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				554
+			],
+			"allTests": [
+				{
+					"response should be okay to process": true,
+					"response should have type and credit": true
+				}
+			]
+		},
+		{
+			"id": "289d58a5-49d5-43e5-807d-8e3d3ebb4330",
+			"name": "transactions",
+			"url": "http://localhost:5000/transactions",
+			"time": 522,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"response should be error": true,
+				"response should return error": true
+			},
+			"testPassFailCounts": {
+				"response should be error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response should return error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				522
+			],
+			"allTests": [
+				{
+					"response should be error": true,
+					"response should return error": true
+				}
+			]
+		},
+		{
+			"id": "cb783ae1-3be8-425a-b8e1-58cc48df154a",
+			"name": "transactions",
+			"url": "http://localhost:5000/transactions",
+			"time": 518,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response should be okay to process": true,
+				"response should have type and credit": true
+			},
+			"testPassFailCounts": {
+				"response should be okay to process": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response should have type and credit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				518
+			],
+			"allTests": [
+				{
+					"response should be okay to process": true,
+					"response should have type and credit": true
+				}
+			]
+		},
+		{
+			"id": "509902e1-e405-455d-9c66-a69d04852502",
+			"name": "transactions/id",
+			"url": "http://localhost:5000/transactions/1",
+			"time": 517,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"response should be okay to process": true,
+				"response should have type and credit": true
+			},
+			"testPassFailCounts": {
+				"response should be okay to process": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response should have type and credit": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				517
+			],
+			"allTests": [
+				{
+					"response should be okay to process": true,
+					"response should have type and credit": true
+				}
+			]
+		},
+		{
+			"id": "720b6a27-33f0-44db-83e6-995bd5a04653",
+			"name": "transactions/id",
+			"url": "http://localhost:5000/transactions/35",
+			"time": 517,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"response should be error": true,
+				"response should return error": true
+			},
+			"testPassFailCounts": {
+				"response should be error": {
+					"pass": 1,
+					"fail": 0
+				},
+				"response should return error": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				517
+			],
+			"allTests": [
+				{
+					"response should be error": true,
+					"response should return error": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2628,
+	"collection": {
+		"requests": [
+			{
+				"id": "6d0190af-6c77-4a30-a003-15b92e47866d",
+				"method": "POST"
+			},
+			{
+				"id": "289d58a5-49d5-43e5-807d-8e3d3ebb4330",
+				"method": "POST"
+			},
+			{
+				"id": "cb783ae1-3be8-425a-b8e1-58cc48df154a",
+				"method": "GET"
+			},
+			{
+				"id": "509902e1-e405-455d-9c66-a69d04852502",
+				"method": "GET"
+			},
+			{
+				"id": "720b6a27-33f0-44db-83e6-995bd5a04653",
+				"method": "GET"
+			}
+		]
+	}
+}

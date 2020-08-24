@@ -19,9 +19,12 @@ perl script/perlrest_app_server.pl -p 5000
 #### Step 4 - Test our new controller:
 - [Postman template][2]
 
+After run the rest, you can execute the postman request.
+
+![Postman tests](postman/postman_00.png)
         
 
 
 
 [1]: https://www.youtube.com/watch?v=eYlCxA1xCLE&list=PLuHGXfTWz_BMzvffPXShwvZxBuv9jAR49
-[2]: https://documenter.getpostman.com/view/8137382/TVCY5rkb
+[2]: https://documenter.getpostman.com/view/8137382/TVCY5rkb    
