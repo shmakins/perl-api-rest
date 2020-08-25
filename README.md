@@ -31,8 +31,12 @@ You can install catalyst and dependencies in your system (step 1.0) or use docke
 #### Step 1.1 - Using Docker with a coffee in hand (20 min to build):
     - Move to docker folder
     
+    Docker
     BUILD: docker build -t perl/rest .
     RUN: docker run --name=rest -it --rm -p 5000:5000 perl/rest
+    
+    Docker-Compose
+    RUN: docker-compose up -d
         
 #### Step 2 - Test our controller:
 - [Postman template][2]
@@ -53,10 +57,6 @@ The UI has Vue.js. And it does requests to the API Rest using Fetch.
 
 - ~~Docker~~ 
 - Improve UI
-
-#### Notes:
-
-- The first docker run failed because I forgot the DBD::SQLite module, but the project works well after add the module. 
 
 [1]: https://www.youtube.com/watch?v=eYlCxA1xCLE&list=PLuHGXfTWz_BMzvffPXShwvZxBuv9jAR49
 [2]: https://documenter.getpostman.com/view/8137382/TVCY5rkb    
