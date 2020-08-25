@@ -16,6 +16,8 @@ requires 'Catalyst::Plugin::Static::Simple';
 requires 'Catalyst::Action::RenderView';
 requires 'Catalyst::Model::DBI';
 requires 'Catalyst::Controller::REST';
+requires 'Template::Toolkit';
+requires 'Catalyst::View::TT';
 requires 'Moose';
 requires 'namespace::autoclean';
 requires 'Config::General'; # This should reflect the config file format you've chosen

@@ -5,8 +5,12 @@ API REST in Perl using Catalyst (Without current experience)
     - Install PERL (http://strawberryperl.com/)
     - Install Catalyst Framework: cpanm -f Catalyst::Devel
       In Windows, versions up to 5.20 fail during test-TCP, so, use force (-f)
-    - Install: Catalyst::Controller::REST
-    - Install: Catalyst::Model::DBI
+    - Install: cpanm Catalyst::Controller::REST
+    - Install: cpanm Catalyst::Model::DBI
+    - Install: cpanm Template::Toolkit
+    - Install: cpanm Catalyst::View::TT
+    
+    - You can use: cpanm --installDeps .
     
 #### Step 2 - Create project:
 - [Video on Youtube][1]    
@@ -22,8 +26,19 @@ perl script/perlrest_app_server.pl -p 5000
 After run the rest, you can execute the postman request.
 
 ![Postman tests](postman/postman_00.png)
-        
 
+#### Step 5 - Test UI:
+
+Go to `http://localhost:5000` and test the UI
+
+The UI has Vue.js. And it do request to the API Rest using Fetch.
+
+![UI](root/static/images/ui_00.png)
+
+#### TODO:
+
+- Docker 
+- Improve UI
 
 
 [1]: https://www.youtube.com/watch?v=eYlCxA1xCLE&list=PLuHGXfTWz_BMzvffPXShwvZxBuv9jAR49
