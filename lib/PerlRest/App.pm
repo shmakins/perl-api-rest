@@ -36,11 +36,19 @@ our $VERSION = '0.01';
 # local deployment.
 
 __PACKAGE__->config(
-    name => 'PerlRest::App',
+    name                                        => 'PerlRest::App',
     # Disable deprecated behavior needed by old applications
     disable_component_resolution_regex_fallback => 1,
-    enable_catalyst_header => 1, # Send X-Catalyst header
-    encoding => 'UTF-8', # Setup request decoding and response encoding
+    enable_catalyst_header                      => 1,       # Send X-Catalyst header
+    encoding                                    => 'UTF-8', # Setup request decoding and response encoding
+
+    'View::HTML'                                => {
+        INCLUDE_PATH => [
+            __PACKAGE__->path_to('root', 'templates'),
+            __PACKAGE__->path_to('root', 'static'),
+        ]
+    },
+    default_view                                => 'HTML'
 );
 
 

@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1D1F20;
+    font-size: 15px;
+    font-family: 'Quicksand', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    --stripe: #cfd8dc;
+    --bg: #e1e1e1;
+
+    background: linear-gradient(135deg, var(--bg) 25%, transparent 25%) -50px 0,
+    linear-gradient(225deg, var(--bg) 25%, transparent 25%) -50px 0,
+    linear-gradient(315deg, var(--bg) 25%, transparent 25%),
+    linear-gradient(45deg, var(--bg) 25%, transparent 25%);
+    background-size: 100px 100px;
+    background-color: var(--stripe);
+
+}
+
+.gradient-border {
+    background: #1D1F20;
+    position: relative;
+}
+
+#transactionApp {
+    margin: 2rem auto;
+    width: 1024px;
+    color: #FFF;
+    background-color: white;
+    border: 2px solid black;
+
+}
+
+#transactionApp h1 {
+    padding: 1rem 3rem 1rem;
+    font-weight: normal;
+    font-size: 2.6rem;
+    letter-spacing: 0.05em;
+    border-bottom: 1px solid rgba(255, 255, 255, .3);
+}
+
+#transactionApp h1 span {
+    display: block;
+    font-size: 0.8rem;
+    margin-bottom: 0.7rem;
+    margin-left: 3px;
+    margin-top: 0.2rem;
+}
+
+#transactionApp .emptylist {
+    margin-top: 2.6rem;
+    text-align: center;
+    letter-spacing: .05em;
+    font-style: italic;
+    opacity: 0.8;
+    font-size: 0.8rem;
+
+}
+
+#transactionApp ul {
+    margin-top: 1rem;
+    list-style: none;
+}
+
+#transactionApp ul.header {
+    margin-top: 0rem;
+    list-style: none;
+}
+
+#transactionApp .transactionsApp-move {
+    transition: transform 1s;
+}
+
+#transactionApp li {
+    display: flex;
+    margin: 0 0rem 4px;
+    padding: 10px 10px;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+#transactionApp .actions {
+    flex-shrink: 0;
+    padding-left: 0.7em;
+}
+
+#transactionApp .label {
+    position: relative;
+    transition: opacity .2s linear;
+}
+
+ul li span a {
+    color: white;
+}
+
+span.label.align-left {
+    text-align: left;
+    width: 40%;
+}
+
+span.align-center {
+    text-align: center;
+    width: 25%;
+}
+
+span.align-center.type {
+    text-align: center;
+    width: 10%;
+}
+
+.parent {
+    height: 600px;
+    display: flex;
+    flex: 1;
+}
+
+.negative-trans {
+    color: orangered;
+}
+
+.site {
+    display: flex;
+    flex-direction: column;
+}
+
+.site-content {
+    flex: 1;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}

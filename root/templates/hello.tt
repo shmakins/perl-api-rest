@@ -1,0 +1,64 @@
+<main id="transactionApp" class="gradient-border site-content">
+    <div class="main gradient-border clearfix">
+
+        <div class="div-header" style="width: 100%">
+            <h1>
+                <span>Transactions list</span>
+            </h1>
+        </div>
+
+        <br/>
+
+        <div style="width: 100%;background: white; color: black" class="clearfix">
+
+            <div style="width: 50%; float: left; padding-top: 50px; padding-left: 50px">
+
+                <input v-model.number="amount">
+                <br><br><br>
+                <input type="radio" id="opt1" value="credit" v-model="type">
+                <label for="opt1">Credit</label>
+                <br>
+                <input type="radio" id="opt2" value="debit" v-model="type">
+                <label for="opt2">Debit</label>
+                <br><br><br>
+
+                <button @click="addTransaction">Add Transaction</button>
+
+                <br><br><br>
+
+                <p style="white-space: pre-line;">{{ errorMessage }}</p>
+
+            </div>
+
+            <div style="width: 45%; float: left">
+                <template v-if="transactions.length">
+                    <ul class="header">
+                        <li>
+                            <span class="label align-left">Effective Date</span>
+                            <span class="label align-center type">Type</span>
+                            <span class="label align-center">Amount</span>
+                            <span class="label align-center">Balance</span>
+                        </li>
+                    </ul>
+
+                    <div class="parent">
+                        <vue-scroll :ops="ops">
+                            <div class="child">
+                                <transition-group name="transactions" tag="ul" class="transactionApplist">
+                                    <li v-for="t in transactions" v-bind:key="t.id" v-bind:class="getClass(t.type)">
+                                        <span class="label align-left">{{t.effectiveDate}}</span>
+                                        <span class="label align-center type">{{t.type}}</span>
+                                        <span class="label align-center">{{formatPrice(t.amount)}}</span>
+                                        <span class="label align-center">{{formatPrice(t.balance)}}</span>
+                                    </li>
+                                </transition-group>
+                            </div>
+                        </vue-scroll>
+                    </div>
+                </template>
+            </div>
+        </div>
+
+
+    </div>
+</main>

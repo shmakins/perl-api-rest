@@ -1,0 +1,11 @@
+<script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
+<link href="static/style.css" rel="stylesheet" type="text/css" />
+
+<body class="site">
+    [% content %]
+</body>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vue"></script>
+<script src="https://unpkg.com/vuescroll"></script>
+<script src="static/index.js"></script>
