@@ -8,6 +8,7 @@ requires 'Catalyst::Model::DBI';
 requires 'Catalyst::Controller::REST';
 requires 'Template::Toolkit';
 requires 'Catalyst::View::TT';
+requires 'DBD::SQLite';
 requires 'Moose';
 requires 'namespace::autoclean';
 requires 'Config::General';
