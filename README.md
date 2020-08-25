@@ -5,10 +5,14 @@ API REST in Perl using Catalyst (Without current experience)
 - [Video on Youtube][1]
 
 
-    The project was created using Catalyst Framework.
-    In lib/PerlRest/App we have our Controller Transactions and the Model Transaction.
-    Also, in root/templates we have the UI. In root/static we have the public resources (css and js).
-    You can install catalyst and dependencies in your system or use docker :)
+
+The project was created using Catalyst Framework.
+
+In lib/PerlRest/App we have our Controller Transactions and the Model Transaction.
+
+In root/templates we have the UI. In root/static we have the public resources (css and js).
+
+You can install catalyst and dependencies in your system (step 1.0) or use docker (step 1.1) ☺️
     
 #### Step 1.0 - Install perl and catalyst:
     - Install PERL (http://strawberryperl.com/)
