@@ -41,7 +41,7 @@ You can install catalyst and dependencies in your system (step 1.0) or use docke
 #### Step 2 - Test our controller:
 - [Postman template][2]
 
-After run the rest, you can execute the postman request.
+After run the rest, you can execute the postman request. In the postman folder, there are json files to import requests in your postman or you can download from the previous link.
 
 ![Postman tests](postman/postman_00.png)
 
