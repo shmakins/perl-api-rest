@@ -2,11 +2,8 @@
 API REST in Perl using Catalyst (Without current experience) - [Demo in aws][4], could be down 😨
 
 #### Project:
-- [Video on Youtube][1]
 
-
-
-The project was created using Catalyst Framework.
+The project was created using Catalyst Framework. I used [this tutorial][1].
 
 In lib/PerlRest/App we have our Controller Transactions and the Model Transaction.
 
