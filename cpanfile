@@ -12,4 +12,6 @@ requires 'DBD::SQLite';
 requires 'Moose';
 requires 'namespace::autoclean';
 requires 'Config::General';
+requires 'Starman'
+requires 'Catalyst::Engine::PSGI'
 test_requires 'Test::More' => '0.88';
